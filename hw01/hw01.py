@@ -27,7 +27,6 @@ def path_sim():
     outf = open(PATH, "w")
     result = []
     for pair in wordlist:
-        # print(pair)
         w1s = wn.synsets(pair[0])
         w2s = wn.synsets(pair[1])
         s = 0.0
@@ -41,7 +40,6 @@ def path_sim():
                     s = tmp
                     cnt += 1
         s /= cnt
-        # print(s)
         outf.write("{}\n".format(s))
         result.append(s)
     outf.close()
